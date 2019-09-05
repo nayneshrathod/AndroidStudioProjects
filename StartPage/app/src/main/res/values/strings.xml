@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Start Page</string>
+    <string name="get_started">Get Started</string>
+    <string name="intro">INTRODUCTION</string>
+    <string name="SHOW">This is a my new sample  \napplication only for View the data</string>
+    <string name="todo">Show Imges</string>
+</resources>
