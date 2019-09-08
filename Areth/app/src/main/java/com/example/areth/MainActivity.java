@@ -14,9 +14,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button btn;
-    private  static int timeout =3000;
+    private static int timeout = 1000;
     ImageView bal;
-    Animation frombm,fromtp;
+    Animation frombm, fromtp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,32 +26,27 @@ public class MainActivity extends AppCompatActivity {
 
         btn = (Button) findViewById(R.id.btnsub);
         bal = (ImageView) findViewById(R.id.ballon);
-        frombm = AnimationUtils.loadAnimation(this,R.anim.frombottom);
-        fromtp = AnimationUtils.loadAnimation(this,R.anim.fromtop);
+        frombm = AnimationUtils.loadAnimation(this, R.anim.frombottom);
+        fromtp = AnimationUtils.loadAnimation(this, R.anim.fromtop);
         btn.setAnimation(frombm);
         bal.setAnimation(fromtp);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Welcome",Toast.LENGTH_LONG).show();
-                fromtp = AnimationUtils.loadAnimation(MainActivity.this,R.anim.fromtop);
+                // Toast.makeText(getApplicationContext(),"Welcome",Toast.LENGTH_LONG).show();
+                fromtp = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fromtop);
                 bal.setAnimation(fromtp);
                 Handler handler = new Handler();
 
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent i =new  Intent(MainActivity.this,WelcomeFile.class);
+                        Intent i = new Intent(MainActivity.this, Login.class);
                         startActivity(i);
                         finish();
                     }
-                },timeout);
-
+                }, timeout);
             }
         });
-
-
-
-
     }
 }

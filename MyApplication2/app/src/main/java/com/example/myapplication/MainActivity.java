@@ -8,14 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity
-{
-    EditText eda,edb;
+public class MainActivity extends AppCompatActivity {
+    EditText eda, edb;
     Button btn, btn1;
-    int a ,b,c;
+    int a, b, c;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         eda = (EditText) findViewById(R.id.fno);
@@ -26,7 +25,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
 
-                Toast msg = Toast.makeText(getBaseContext(),"Shaw The Data",Toast.LENGTH_LONG);
+                Toast msg = Toast.makeText(getBaseContext(), "Shaw The Data", Toast.LENGTH_LONG);
                 msg.show();
             }
         });
@@ -35,8 +34,8 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 a = Integer.parseInt(eda.getText().toString());
                 b = Integer.parseInt(edb.getText().toString());
-                c = a+b;
-                Toast msg = Toast.makeText(getBaseContext(),c,Toast.LENGTH_LONG);
+                c = a + b;
+                Toast msg = Toast.makeText(getBaseContext(), c, Toast.LENGTH_LONG);
                 msg.show();
             }
         });
