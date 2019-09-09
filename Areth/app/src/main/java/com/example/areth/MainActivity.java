@@ -15,7 +15,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     Button btn;
     private static int timeout = 1000;
-    ImageView bal;
+    ImageView bal, wel;
     Animation frombm, fromtp;
 
     @Override
@@ -26,16 +26,18 @@ public class MainActivity extends AppCompatActivity {
 
         btn = (Button) findViewById(R.id.btnsub);
         bal = (ImageView) findViewById(R.id.ballon);
+        wel = (ImageView) findViewById(R.id.welcome);
         frombm = AnimationUtils.loadAnimation(this, R.anim.frombottom);
         fromtp = AnimationUtils.loadAnimation(this, R.anim.fromtop);
         btn.setAnimation(frombm);
         bal.setAnimation(fromtp);
+        wel.setAnimation(frombm);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Toast.makeText(getApplicationContext(),"Welcome",Toast.LENGTH_LONG).show();
-                fromtp = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fromtop);
-                bal.setAnimation(fromtp);
+                // fromtp = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fromtop);
+                // bal.setAnimation(fromtp);
                 Handler handler = new Handler();
 
                 handler.postDelayed(new Runnable() {

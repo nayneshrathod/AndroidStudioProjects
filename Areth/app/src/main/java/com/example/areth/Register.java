@@ -10,12 +10,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Register extends AppCompatActivity {
-        EditText fn, sn;
-        Button add , sdd, ddd, mdd, bdd;
-        TextView rlt;
-        int r, n1, n2;
-        String s1, s2;
-
+    EditText fn, sn;
+    Button add, sdd, ddd, mdd, bdd;
+    TextView rlt;
+    int r, n1, n2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,40 +27,43 @@ public class Register extends AppCompatActivity {
         bdd = (Button) findViewById(R.id.btnback);
         rlt = (TextView) findViewById(R.id.txtResult);
 
-        s1 = fn.getText().toString();
-        s2 = sn.getText().toString();
-        n1 = Integer.parseInt(s1);
-        n2 = Integer.parseInt(s2);
-
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                n1 = Integer.parseInt(fn.getText().toString());
+                n2 = Integer.parseInt(sn.getText().toString());
                 r = n1 + n2;
-                rlt.setText(r);
+                rlt.setText(Integer.toString(r));
             }
         });
 
         sdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                n1 = Integer.parseInt(fn.getText().toString());
+                n2 = Integer.parseInt(sn.getText().toString());
                 r = n1 - n2;
-                rlt.setText(Integer.parseInt(r));
+                rlt.setText(Integer.toString(r));
             }
         });
 
         ddd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                n1 = Integer.parseInt(fn.getText().toString());
+                n2 = Integer.parseInt(sn.getText().toString());
                 r = n1 / n2;
-                rlt.setText(Integer.parseInt(r));
+                rlt.setText(Integer.toString(r));
             }
         });
 
         mdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                n1 = Integer.parseInt(fn.getText().toString());
+                n2 = Integer.parseInt(sn.getText().toString());
                 r = n1 * n2;
-                rlt.setText(r);
+                rlt.setText(Integer.toString(r));
             }
         });
 

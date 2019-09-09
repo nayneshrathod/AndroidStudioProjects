@@ -16,7 +16,10 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/keeda" />
+        app:srcCompat="@drawable/backbg"
+        android:outlineAmbientShadowColor="@color/colorPrimary"
+        android:outlineSpotShadowColor="@color/colorAccent"
+        />
 
     <EditText
             android:id="@+id/numst"

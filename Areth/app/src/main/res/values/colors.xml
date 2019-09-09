@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#52378B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="btn">#2196F3</color>
+    <color name="bgcolor">#40C4FF</color>
+    <color name="ronbtn">#AA00FF</color>
 </resources>
