@@ -70,7 +70,7 @@ public class Register extends AppCompatActivity {
         bdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), WelcomeFile.class);
+                Intent i = new Intent(getApplicationContext(), ListViewExample.class);
                 startActivity(i);
             }
         });

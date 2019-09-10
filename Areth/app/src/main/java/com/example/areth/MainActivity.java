@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button btn;
-    private static int timeout = 1000;
+    private static int timeout = 1500;
 
     ImageView bal, wel;
     Animation frombm, fromtp,zoom;

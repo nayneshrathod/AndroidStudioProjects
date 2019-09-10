@@ -23,6 +23,8 @@ public class Login extends AppCompatActivity {
         clrs = (Button) findViewById(R.id.btnRest);
         logn = (Button) findViewById(R.id.btnLogin);
 
+        user.setText("admin");
+        pass.setText("123");
 
         clrs.setOnClickListener(new View.OnClickListener() {
             @Override
