@@ -29,8 +29,7 @@
         android:id="@+id/spinner_practical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="84dp"
         android:gravity="center_vertical"
         android:text="Sppiner Practical"
         android:textAlignment="center"
@@ -38,6 +37,7 @@
         android:textColor="#014"
         android:textCursorDrawable="@color/colorPrimary"
         android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
@@ -45,8 +45,7 @@
         android:id="@+id/greter_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="96dp"
+        android:layout_marginTop="32dp"
         android:gravity="center_vertical"
         android:text="Gretaer Number Find"
         android:textAlignment="center"
@@ -55,7 +54,9 @@
         android:textCursorDrawable="@color/colorPrimary"
         android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_practical" />
 
     <TextView
         android:id="@+id/hed2"
