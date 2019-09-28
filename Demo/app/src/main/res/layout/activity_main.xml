@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            // नाव व पत्ता
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+                //नाव
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/नाव"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/user_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/नाव"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                //पत्ता
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/पत्ता"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/user_person_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/पत्ता"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            // Q1 A) कुटुंबातील व्यक्तींची एकूण संख्या -
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/कुटुंबातील_संख्या"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/total_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/एकूण_संख्या"
+                    android:inputType="number"
+                    android:autofillHints="" />
+            </LinearLayout>
+            // Q1 B) पैकी वय वर्षे १५ पर्यंतची व -
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/पर्यंतची_१५"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/max_15_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/पर्यंतच_१५"
+
+                    android:inputType="number" />
+            </LinearLayout>
+            // Q1 C) १५ वर्षांपेक्षा अधिक वय असलेली किती?
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/वर्षांपेक्षा_अधिक"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/more_Than_15_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/वर्षांपेक्षा_जास्त"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            // Q2 A) कुटुंबातील कमावत्या व्यक्तींची संख्या -
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/कुटुंबातील_कमावते"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/family_total_worker_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/काम_व्यक्तींची_संख्या"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            // Q2 B) त्यांचे एकूण मासीक उत्पन्न
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/मासीक_उत्पन्न"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/total_income"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/उत्पन्न_रुपये"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            // Q3 किराणा मालाची खरेदी कोठून करतात ?
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/किराणा_मालाची"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/दुकानाचेनाव"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/which_Store"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/दुकानाचेनाव"
+                    android:inputType="textMultiLine"
+                    android:lines="2" />
+            </LinearLayout>
+
+            // Q4 एका वेळी किती रकमेचा माल खरेदी करतात
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/एका_वेळी_खरेदी"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:checkedButton="1"
+                    android:paddingLeft="-20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/checkBoxA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/रु_५००_ते_१०००" />
+
+                        <CheckBox
+                            android:id="@+id/checkBoxC"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/रु_२०००_ते_३०००" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/checkBoxB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/रु_१०००_ते_२०००" />
+
+                        <CheckBox
+                            android:id="@+id/checkBoxD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/रु_३०००_ते_पेक्षा_अधिक" />
+                    </LinearLayout>
+                </RadioGroup>
+            </LinearLayout>
+
+            // Q5 दरमहा किती रुपयांचा किराणामाल लागतो?
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/दरमहा_किती_रुपयांचा_माल"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/every_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:checkedButton="1"
+                    android:paddingLeft="-20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/रु_२०००_पर्यंत" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_C"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/रु_४०००_ते_६०००" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="60dp"
+
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_B"
+                            android:layout_width="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/रु_२०००_ते_४०००" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox_D"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/रु_६०००_ते_पेक्षा_अधिक" />
+                    </LinearLayout>
+                </RadioGroup>
+            </LinearLayout>
+
+            // Q6 धान्य वर्षाचे विकत घेतात कि दरमहा विकत घेतात?
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/धान्य_वर्षाचे_दरमहा"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup3"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:checkedButton="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkBoxYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="28dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/वर्षाचे" />
+
+                        <CheckBox
+                            android:id="@+id/checkBoxEvryMonth"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="123dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/दरमहा" />
+                    </LinearLayout>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            // Q7 महिन्यासाठी लागणारा किराणामाल व धान्य एकदम विकत घेतल्यास काय फायदा होईल-जसे की
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/एकदम_धान्य_घेतल्यास"
+                    android:textSize="18sp" />
+
+                // Q7 A)
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/अ_मोठ्या_दुकानातून"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup7A"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:checkedButton="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/checkBox7A_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="@string/हो" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox7A_no"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/नाही" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox7A_Dont_know"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/काही_फरक_पडणार_नाही" />
+                        </LinearLayout>
+
+                    </RadioGroup>
+                </LinearLayout>
+                // Q7 B)
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ब_अल्पप्रमाणात_किमती_फरक"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup7B"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:checkedButton="1"
+                        android:gravity="fill_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/checkBox7B_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="25dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="@string/हो" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox7B_no"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/नाही" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox7B_Dont_know"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:text="@string/काही_फरक_पडणार_नाही" />
+                        </LinearLayout>
+
+                    </RadioGroup>
+                </LinearLayout>
+                // Q7 C)
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/क_उधारीने_माल_विकत_घेणे"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup7C"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:checkedButton="1"
+                        android:gravity="fill_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/checkBox7C_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="@string/हो" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox7C_no"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/नाही" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox7C_Dont_know"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:text="@string/काही_फरक_पडणार_नाही" />
+                        </LinearLayout>
+
+                    </RadioGroup>
+                </LinearLayout>
+                // Q7 D)
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ड_इतर_काही_नवीन_फायदा"
+                        android:textSize="18sp" />
+
+
+                    <EditText
+                        android:id="@+id/Extra_Prfit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/इतर_फायदा"
+                        android:inputType="textMultiLine"
+                        android:lines="2" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            // Q8 किराणामालाची खरेदी कोण करतो?
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/खरेदी_कोण_करतो"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupQ8"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:checkedButton="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkBoxQ8_Self"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="28dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/स्वतः" />
+
+                        <CheckBox
+                            android:id="@+id/checkBoxQ8_familyMember"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="123dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/कुटुंबातील_सदस्य" />
+                    </LinearLayout>
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+            // Q9 तुम्ही स्वतः खरेदी केली तर काय फरक पडेल
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/तुम्ही_स्वतः_खरेदी_केली_तर"
+                    android:textSize="18sp" />
+
+
+                <EditText
+                    android:id="@+id/what_Effect_Self_Shopping"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/तुम्ही_खरेदी_केली_तर"
+                    android:inputType="textMultiLine"
+                    android:lines="2" />
+            </LinearLayout>
+
+            // Q10 किराणामाल उधारीने खरेदी करतात की रोखीने
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/किराणा_उधारीने_का_रोखीने"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupQ10"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:checkedButton="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkBoxQ10_Lending"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="28dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/उधारीने" />
+
+                        <CheckBox
+                            android:id="@+id/checkBoxQ10_With_cash"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="123dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/रोखीने" />
+                    </LinearLayout>
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+            // Q11 या संदर्भात इतर काही माहिती द्यावयाची असल्यास द्यावी
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/या_संदर्भात_इतर_काही_माहिती"
+                    android:textSize="18sp" />
+
+
+                <EditText
+                    android:id="@+id/Your_opinoin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/या_संदर्भात_इतर_काही_माहिती"
+                    android:inputType="textMultiLine"
+                    android:lines="2" />
+            </LinearLayout>
+
+            // शेवटचे button data पाठवणे
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="50dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/send_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/पाठवा"
+                    android:background="@drawable/submit_btn"
+                    />
+
+                <Button
+                    android:id="@+id/clear_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:text="@string/पुसा"
+                    android:background="@drawable/submit_clear"
+                    />
+
+
+            </LinearLayout>
+
+
+            // end Scroll View
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
